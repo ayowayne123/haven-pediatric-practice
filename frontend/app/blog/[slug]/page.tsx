@@ -35,7 +35,7 @@ export async function generateStaticParams() {
  */
 export async function generateMetadata(
   props: Props,
-  parent: ResolvingMetadata,
+  parent: ResolvingMetadata
 ): Promise<Metadata> {
   const params = await props.params;
   const { data: post } = await sanityFetch({
@@ -105,10 +105,10 @@ export default async function PostPage(props: Props) {
           </div>
         </div>
       </div>
-      <div className="border-t border-gray-100 bg-gray-50">
-        <div className="container py-12 lg:py-24 grid gap-12">
+      <div className=" ">
+        <div className="container py-12 lg:py-24 grid lg:grid-cols-3 gap-12">
           <aside>
-            <Suspense>{await MorePosts({ skip: post._id, limit: 2 })}</Suspense>
+            <Suspense>{await MorePosts({ skip: post._id, limit: 3 })}</Suspense>
           </aside>
         </div>
       </div>

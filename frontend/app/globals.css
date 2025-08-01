@@ -27,9 +27,64 @@
   --color-gray-800: #252837;
   --color-gray-900: #1b1d27;
   --color-gray-950: #13141b;
+  --color-havenBlue: #4192ca;
+  --color-havenPink: #f0467e;
+  --color-havenYellow: #f8c015;
+  --color-havenGreen: #69c99e;
+  --color-havenDarkBlue: #0d3c5d;
+  --color-havenLightPeach: #fce7d5;
+  --color-havenLightPink: #ffedf3;
 
-  --font-display: "Inter", "sans-serif";
-  --font-sans: "Inter", "sans-serif";
+  --font-display: "Nunito", "sans-serif";
+  --font-sans: "Nunito", "sans-serif";
 
   --default-transition-duration: 250ms;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+h1 {
+  @apply font-extrabold text-3xl md:text-4xl xl:text-[54px] 2xl:text-6xl;
+}
+
+h2 {
+  @apply xl:text-4xl lg:text-3xl 2xl:text-[40px] font-extrabold;
+}
+.pryBtn {
+  @apply bg-havenBlue text-white hover:bg-havenDarkBlue;
+}
+
+.secBtn {
+  @apply border-2 border-black text-black hover:border-havenBlue hover:text-havenBlue;
+}
+.btn {
+  @apply font-extrabold  w-44 h-12 flex items-center justify-center lg:w-[220px] lg:h-[60px] rounded-full;
+}
+
+.aboutList {
+  @apply flex flex-col lg:flex-row items-center gap-6 lg:px-12 xl:px-20;
+  span {
+    @apply shrink-0 flex items-center justify-center w-16 h-16 rounded-full lg:w-20 lg:h-20 xl:w-24 xl:h-24  font-extrabold text-lg lg:text-2xl xl:text-3xl gap-6;
+  }
+  p {
+    @apply text-lg text-center lg:text-left lg:text-2xl 2xl:text-3xl;
+  }
+}
+
+.cardWidth {
+  @apply pl-[calc((100vw-640px)/2+2rem)]
+  sm:pl-[calc((100vw-768px)/2+2rem)]
+  md:pl-[calc((100vw-1024px)/2+2rem)]
+  lg:pl-[calc((100vw-1280px)/2+2rem)]
+  2xl:pl-[calc((100vw-1536px)/2+2rem)] pr-40;
+}
+
+.bgCurve {
+  border-radius: 50% 50% 0% 0% / 75% 75% 0% 0%;
 }
