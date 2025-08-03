@@ -20,17 +20,17 @@ import { handleError } from "./client-utils";
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: {
-      default: "Your Site Name",
+      default: "Haven Pediatric Practice",
       template: "%s | Haven Pediatric Practice",
     },
-    description: "Welcome to my site – a creative portfolio and blog.",
+    description: "A Pediatric Practice",
     openGraph: {
       images: [
         {
           url: "/og-image.png", // Place your static image in public/og-image.png
           width: 1200,
           height: 630,
-          alt: "Site OG Image",
+          alt: "Haven",
         },
       ],
     },
