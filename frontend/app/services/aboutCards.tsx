@@ -80,18 +80,41 @@ const CardInfo = [
 
 function AboutCards() {
   return (
-    <div className="grid lg:grid-cols-3 xl:gap-5 lg:gap-3 2xl:gap-9 container lg:py-28 xl:py-32">
-      {CardInfo.map((card, index) => (
-        <Card
-          bgColor={card.bgColor}
-          headingText={card.headingText}
-          bodyText={card.bodyText}
-          linkName={card.linkName}
-          doubleColumn={card.doubleColumn}
-          key={index}
-        />
-      ))}
-    </div>
+    <>
+      <div className="grid lg:grid-cols-3 sm:grid-cols-2 sm:gap-3 xl:gap-5 lg:gap-3 2xl:gap-9 container lg:py-28 xl:py-32 gap-7 py-16">
+        {CardInfo.map((card, index) => (
+          <Card
+            bgColor={card.bgColor}
+            headingText={card.headingText}
+            bodyText={card.bodyText}
+            linkName={card.linkName}
+            doubleColumn={card.doubleColumn}
+            key={index}
+          />
+        ))}
+      </div>
+      <div
+        className={`text-white h-[740px] md:h-[550px] text-sm w-full bg-cover bg-no-repeat bg-center lg:col-span-2 p-6  flex flex-col justify-end lg:hidden `}
+        style={{
+          backgroundImage: ` url(${hospitalRoom.src})`,
+        }}
+      >
+        <div className="bg-havenDarkBlue container rounded-[10px] px-12 py-11 h-[510px] md:h-[400px]">
+          <h3 className="text-xl font-extrabold flex flex-col">
+            <span>Why Families</span>
+            <span> Choose Haven</span>
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 py-7 text-sm md:text-base">
+            {havenReasons.map((reason, index) => (
+              <div key={index} className="flex items-center gap-6  ">
+                <div className="border-havenYellow w-3 h-3 border-2 rounded-full" />
+                <span>{reason}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 
@@ -105,7 +128,7 @@ const Card: React.FC<CardProps> = ({
   if (doubleColumn === true) {
     return (
       <div
-        className={`text-white lg:h-[440px] text-sm w-full bg-cover bg-no-repeat bg-center col-span-2 p-6 rounded-[20px] flex flex-col justify-between `}
+        className={`text-white lg:h-[440px] text-sm w-full bg-cover bg-no-repeat bg-center lg:col-span-2 p-6 rounded-[20px] lg:flex flex-col justify-between hidden `}
         style={{
           backgroundImage: ` url(${hospitalRoom.src})`,
         }}
@@ -129,12 +152,12 @@ const Card: React.FC<CardProps> = ({
   } else {
     return (
       <div
-        className={`lg:h-[440px] text-sm w-full col-span-1 px-10 pb-[60px] pt-[90px] rounded-[20px] flex flex-col justify-between ${bgColor}`}
+        className={`lg:h-[440px] h-[400px] text-sm w-full col-span-1 lg:px-10  px-9 pb-[40px] lg:pb-[60px] lg:pt-[90px] pt-[75px] rounded-[20px] flex flex-col justify-between ${bgColor}`}
       >
-        <h3 className="lg:text-2xl xl:text-[26px] font-extrabold xl:h-[70px] ">
+        <h3 className="lg:text-2xl text-xl xl:text-[26px] font-extrabold xl:h-[70px] min-h-[54px] ">
           {headingText}
         </h3>
-        <p className="leading-[27px]">{bodyText}</p>
+        <p className="lg:leading-[27px] leading-[22px]">{bodyText}</p>
         <Link
           className="underline underline-offset-4 hover:text-havenBlue w-max"
           href="/consultation"
