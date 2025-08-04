@@ -10,17 +10,19 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-black relative text-white lg:py-28">
-      <div className="container grid lg:grid-cols-6 gap-24 text-lg">
-        <div className="col-span-3 space-y-12">
+    <footer className="bg-black relative text-white lg:py-28 py-16">
+      <div className="container grid lg:grid-cols-6 gap-12 lg:gap-24 text-lg">
+        <div className="lg:col-span-3 space-y-12 lg:block flex flex-col items-center justify-center">
           <Image src={logo} alt="logo" width={48} height={48} />
-          <div>© 2025 Haven Pediatric Practice. All rights reserved.</div>
+          <div className="hidden md:block">
+            © 2025 Haven Pediatric Practice. All rights reserved.
+          </div>
         </div>
 
-        <nav className="col-span-2 ">
+        <nav className="lg:col-span-2 ">
           <ul
             role="list"
-            className="grid grid-cols-2 gap-x-2 gap-y-4 capitalize"
+            className="lg:grid lg:grid-cols-2 hidden gap-x-2 gap-y-4 capitalize "
           >
             <li>
               <Link href="/home">home</Link>
@@ -41,9 +43,32 @@ export default function Footer() {
               <Link href="/blog">haven insight</Link>
             </li>
           </ul>
+          <ul
+            role="list"
+            className="flex flex-row flex-wrap lg:hidden gap-y-4 px-4 capitalize items-center justify-center w-full text-center"
+          >
+            <li className="basis-1/2 text-xs ">
+              <Link href="/home">home</Link>
+            </li>
+            <li className="basis-1/2 text-xs ">
+              <Link href="/about">about us</Link>
+            </li>
+            <li className="basis-1/2 text-xs ">
+              <Link href="/services">our services</Link>
+            </li>
+            <li className="basis-1/2 text-xs ">
+              <Link href="/consulation">consulation</Link>
+            </li>
+            <li className="basis-1/2 text-xs ">
+              <Link href="/contact">contact us</Link>
+            </li>
+            <li className="basis-1/2 text-xs ">
+              <Link href="/blog">haven insight</Link>
+            </li>
+          </ul>
         </nav>
-        <div className="col-span-1 space-y-10">
-          <div className="grid grid-cols-3 ">
+        <div className="lg:col-span-1 lg:space-y-10 space-y-4 mx-auto">
+          <div className="lg:grid lg:grid-cols-3  flex gap-4">
             <Link href="https://instagram.com" target="_blank">
               <InstagramIcon size={30} />
             </Link>
@@ -56,6 +81,9 @@ export default function Footer() {
             </Link>
           </div>
           <span>Lagos, Nigeria</span>
+        </div>
+        <div className="md:hidden text-xs text-center">
+          © 2025 Haven Pediatric Practice. All rights reserved.
         </div>
       </div>
     </footer>

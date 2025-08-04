@@ -16,9 +16,9 @@ export default async function Page() {
         <EveryStep />
         <HMOs />
       </div>
-      <div className="">
-        <div className="container">
-          <h2 className="text-3xl font-bold  text-black sm:text-4xl lg:text-[40px] flex flex-col text-center">
+      <div className="bg-[#FFFDF6] md:bg-white">
+        <div className="container pt-11">
+          <h2 className="text-3xl font-bold text-havenBlue lg:text-black sm:text-4xl lg:text-[40px] flex flex-col text-center">
             <span> Latest Health Tips</span>
             <span> Stay Informed. Stay Healthy</span>
           </h2>

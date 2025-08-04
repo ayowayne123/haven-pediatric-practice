@@ -11,11 +11,13 @@ function CoreServices() {
   return (
     <section className=" py-16 ">
       <div className="container mb-12">
-        <h2 className="text-3xl font-bold">Our Core Services</h2>
+        <h2 className="lg:text-3xl text-2xl font-bold md:text-left text-center">
+          Our Core Services
+        </h2>
       </div>
 
-      <div className="cardWidth overflow-x-auto no-scrollbar">
-        <div className="flex gap-11 w-full mr-20">
+      <div className="cardWidth md:overflow-x-auto no-scrollbar ">
+        <div className="flex md:flex-row flex-col gap-11 w-full lg:mr-20 mr-10">
           <ServiceCard
             number="01"
             bgColor="bg-havenBlue"
@@ -52,14 +54,14 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 }) => {
   return (
     <div
-      className={`lg:w-[428px] lg:h-[660px] ${bgColor} shrink-0 rounded-3xl xl:py-16 xl:px-[60px] text-white flex flex-col justify-start`}
+      className={`lg:w-[428px] lg:h-[660px] h-[498px] ${bgColor} shrink-0 rounded-3xl xl:py-16 xl:px-[60px] px-10 lg:px-12 py-[72px] text-white flex flex-col justify-start`}
     >
       <p
-        className={`text-[48px] lg:text-[65px] font-bold lg:mb-20 ${headingColor}`}
+        className={`text-[40px] lg:text-[65px] font-bold lg:mb-20 mb-16 ${headingColor}`}
       >
         {number}
       </p>
-      <h3 className="text-lg lg:text-[28px] font-bold lg:h-[80px] mb-4 mt-3 ">
+      <h3 className="text-lg lg:text-[28px] font-bold lg:h-[80px] h-[50px] mb-4 mt-3 ">
         {headingText}
       </h3>
       <p className="text-sm lg:text-xl leading-relaxed  font-extralight">

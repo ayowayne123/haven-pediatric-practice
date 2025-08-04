@@ -51,13 +51,13 @@ const hmoPartners = [
 
 function HMOs() {
   return (
-    <section className="py-36">
-      <h2 className="text-center">Our HMO Partners</h2>
-      <div className="cardWidth flex flex-row overflow-x-auto snap-mandatory snap-x gap-9  mt-10 no-scrollbar">
+    <section className="lg:py-36 py-16 bg-[#FFFDF6] md:bg-white">
+      <h2 className="text-center  mb-12 lg:mb-20">Our HMO Partners</h2>
+      <div className="cardWidth flex flex-row overflow-x-auto snap-mandatory snap-x gap-9  no-scrollbar">
         {hmoPartners.map((partner, index) => (
           <div
             key={index}
-            className="w-[220px] h-[76px] relative  shrink-0 snap-center"
+            className="lg:w-[220px] w-[130px] h-[52px] lg:h-[76px] relative  shrink-0 snap-center"
           >
             <Image
               src={partner.src}

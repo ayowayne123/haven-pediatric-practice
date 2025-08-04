@@ -34,14 +34,14 @@ function EveryStep() {
   ];
   return (
     <section className="relative bg-white overflow-hidden">
-      <div className="bg-havenLightPink w-[140%] -translate-x-[14%] min-h-[1000px] bgCurve">
-        <div className="container lg:pt-24 xl:pt-28">
-          <h2 className="xl:text-4xl lg:text-3xl font-extrabold flex flex-col lg:mb-16">
+      <div className="bg-havenLightPink w-[140%] -translate-x-[14%] lg:min-h-[1000px] min-h-[590px] lg:bgCurve bgCurveMobile">
+        <div className="sm:container max-w-[100vw] mx-auto lg:pt-24 xl:pt-28 px-8">
+          <h2 className="xl:text-4xl lg:text-3xl font-extrabold flex flex-col lg:mb-16 text-2xl">
             <span>We’re Here for You.</span>
             <span>Every Step of the Way.</span>
           </h2>
           <div className="grid lg:grid-cols-2">
-            <div className="w-full h-[650px] relative rounded-xl overflow-hidden">
+            <div className="w-full h-[650px] relative rounded-xl overflow-hidden lg:flex hidden">
               <Image
                 src={Hospital}
                 alt="AN hospital bed"
@@ -50,7 +50,7 @@ function EveryStep() {
               />
             </div>
 
-            <div className="ml-9 relative text-[22px] leading-[36px] py-6 gap-y-6 flex flex-col">
+            <div className="lg:ml-9 my-4 md:my-0 relative text-sm md:text-[22px] leading-[22px] md:leading-[36px] py-3 gap-y-5 lg:py-6 lg:gap-y-6 flex flex-col">
               <div className="w-[4px] bg-pink-200 rounded-lg h-full absolute left-0 top-0" />
               {features.map((item, index) => (
                 <div
@@ -71,10 +71,12 @@ function EveryStep() {
         </div>
       </div>
       {/* Testimonials */}
-      <div className="lg:pt-20 lg:pb-24 bg-havenLightPink">
-        <h2 className="text-center lg:mb-16">See what patients say about us</h2>
-        <div className="cardWidth overflow-x-auto no-scrollbar">
-          <div className="flex gap-11 w-full mr-20">
+      <div className="lg:pt-20 lg:pb-24 pb-16 pt-16 lg:bg-havenLightPink">
+        <h2 className="text-center lg:mb-16 mb-11 max-w-[215px] lg:max-w-full mx-auto">
+          See what patients say about us
+        </h2>
+        <div className="cardWidth md:overflow-x-auto no-scrollbar">
+          <div className="flex md:flex-row flex-col gap-11 w-full lg:mr-20 mr-10">
             <Testimonial
               name="Maryam Sanusi"
               place="(Meatmadamng)"
@@ -98,14 +100,16 @@ function EveryStep() {
 const Testimonial: React.FC<TestimonialProps> = ({ name, place, bodyText }) => {
   return (
     <div
-      className={`lg:w-[428px] lg:h-[480px]  shrink-0 rounded-2xl xl:pt-16 xl:pl-10 xl:pr-7 border border-black text-black flex flex-col `}
+      className={`lg:w-[428px] lg:h-[480px] h-[420px] pt-20  shrink-0 rounded-2xl xl:pt-16 xl:pl-10 pr-7 pl-7 border border-black text-black flex flex-col `}
     >
       <span className="text-havenPink text-4xl mb-16">
         <VscQuote />
       </span>
       <div className="text-sm lg:text-xl leading-relaxed  font-light flex flex-col justify-between h-full pb-8">
         {bodyText}
-        <div className={` font-extrabold   flex flex-col h-20`}>
+        <div
+          className={` font-extrabold text-lg lg:text-xl  flex flex-col h-20`}
+        >
           <span>{name}</span>
           <span>{place}</span>
         </div>

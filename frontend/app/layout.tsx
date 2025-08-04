@@ -27,8 +27,8 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       images: [
         {
-          url: "/og-image.png", // Place your static image in public/og-image.png
-          width: 1200,
+          url: "/og.png", // Place your static image in public/og-image.png
+          width: 600,
           height: 630,
           alt: "Haven",
         },
