@@ -53,19 +53,19 @@ export default function AboutCards() {
       {sections.map((section, i) => (
         <div
           key={i}
-          className={`grid grid-cols-12 ${section.bg} p-6 lg:py-11 lg:px-16 rounded-lg`}
+          className={`grid grid-cols-12 ${section.bg} p-6 lg:py-11 lg:px-16 px-7 py-16  rounded-lg`}
         >
-          <div className="col-span-12 md:col-span-3 font-extrabold lg:text-[26px] text-black max-w-[157px]">
+          <div className="col-span-12 md:col-span-3 font-extrabold text-xl lg:text-[26px] text-black max-w-[157px] mb-6 lg:mb-0">
             {section.title}
           </div>
-          <div className="col-span-12 md:col-span-9 text-black text-xl leading-loose space-y-1">
+          <div className="col-span-12 md:col-span-9 text-black text-sm lg:text-xl leading-loose space-y-1">
             {section.body}
           </div>
         </div>
       ))}
-      <div className="grid lg:grid-cols-3 gap-8">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <div className="flex flex-col">
-          <div className="relative w-full h-[470px] bg-havenPink rounded-[20px]">
+          <div className="relative w-full h-[470px] md:h-[400px] bg-havenPink rounded-[20px] overflow-hidden">
             <Image
               className="object-cover"
               src={cmd}
@@ -73,13 +73,15 @@ export default function AboutCards() {
               fill
             />
           </div>
-          <h4 className="font-bold text-[28px] mt-8 mb-2">
+          <h4 className="font-bold text-xl lg:text-left w-full text-centerlg:text-[28px] mt-8 mb-2">
             Dr. Odedina Adegbajo
           </h4>
-          <p className="text-xl text-[#625C5C] pr-4">Chief Medical Director</p>
+          <p className=" text-sm lg:text-xl text-[#625C5C] lg:pr-4">
+            Chief Medical Director
+          </p>
         </div>
         <div className="flex flex-col">
-          <div className="relative w-full h-[470px] bg-havenBlue rounded-[20px]">
+          <div className="relative w-full h-[470px] md:h-[400px] bg-havenBlue rounded-[20px] overflow-hidden">
             <Image
               className="object-cover"
               src={olatunde}
@@ -87,15 +89,15 @@ export default function AboutCards() {
               fill
             />
           </div>
-          <h4 className="font-bold text-[28px] mt-8 mb-2">
+          <h4 className="font-bold text-xl lg:text-left w-full text-centerlg:text-[28px] mt-8 mb-2">
             Dr. Olatunde Odusote
           </h4>
-          <p className="text-xl text-[#625C5C] pr-4">
+          <p className=" text-sm lg:text-xl text-[#625C5C] lg:pr-4">
             Consultant Pediatrician, Allergologist and Dermatologist.
           </p>
         </div>
         <div className="flex flex-col">
-          <div className="relative w-full h-[470px] bg-havenYellow rounded-[20px]">
+          <div className="relative w-full h-[470px] md:h-[400px] bg-havenYellow rounded-[20px] overflow-hidden">
             <Image
               className="object-cover"
               src={motunrayo}
@@ -103,10 +105,10 @@ export default function AboutCards() {
               fill
             />
           </div>
-          <h4 className="font-bold text-[28px] mt-8 mb-2">
+          <h4 className="font-bold text-xl lg:text-left w-full text-centerlg:text-[28px] mt-8 mb-2">
             Dr. Motunrayo Oluwabukola
           </h4>
-          <p className="text-xl text-[#625C5C] pr-4">
+          <p className=" text-sm lg:text-xl text-[#625C5C] lg:pr-4">
             Paediatric Hematology / Oncologist
           </p>
         </div>

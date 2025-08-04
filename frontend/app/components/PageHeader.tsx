@@ -18,7 +18,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({
         backgroundImage: `linear-gradient(to bottom, rgba(255,255,255), rgba(72,120,153), rgba(2,20,33)), url(${backgroundImage})`,
       }}
     >
-      <div className="relative z-10 flex flex-col lg:flex-row md:pt-[450px] 2xl:pt-[520px] pt-[350px]  lg:justify-between h-full container">
+      <div className="relative z-10 flex flex-col lg:flex-row md:pt-[450px] 2xl:pt-[520px] md:pb-20 lg:pb-0 pb-16  justify-end  lg:justify-between h-full container">
         <h4 className="text-3xl lg:text-4xl xl:text-5xl font-extrabold lg:max-w-[420px] max-w-60">
           {heading}
         </h4>

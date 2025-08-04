@@ -11,13 +11,13 @@ function CoreServices() {
   return (
     <section className=" py-16 ">
       <div className="container mb-12">
-        <h2 className="lg:text-3xl text-2xl font-bold md:text-left text-center">
+        <h2 className="lg:text-3xl text-2xl font-bold sm:text-left text-center">
           Our Core Services
         </h2>
       </div>
 
-      <div className="cardWidth md:overflow-x-auto no-scrollbar ">
-        <div className="flex md:flex-row flex-col gap-11 w-full lg:mr-20 mr-10">
+      <div className="cardWidth sm:overflow-x-auto no-scrollbar ">
+        <div className="flex sm:flex-row flex-col gap-6 lg:gap-11 w-full md:mr-20 mr-10">
           <ServiceCard
             number="01"
             bgColor="bg-havenBlue"
@@ -54,7 +54,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 }) => {
   return (
     <div
-      className={`lg:w-[428px] lg:h-[660px] h-[498px] ${bgColor} shrink-0 rounded-3xl xl:py-16 xl:px-[60px] px-10 lg:px-12 py-[72px] text-white flex flex-col justify-start`}
+      className={`md:w-[428px] sm:w-[400px] lg:h-[660px] h-[498px] ${bgColor} shrink-0 rounded-3xl xl:py-16 xl:px-[60px] px-10 lg:px-12 py-[72px] text-white flex flex-col justify-start`}
     >
       <p
         className={`text-[40px] lg:text-[65px] font-bold lg:mb-20 mb-16 ${headingColor}`}

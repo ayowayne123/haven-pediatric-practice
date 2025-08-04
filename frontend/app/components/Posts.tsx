@@ -117,7 +117,7 @@ export const RecentPosts = async () => {
 
   return (
     <Posts>
-      <div className="grid lg:grid-cols-3 gap-16">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2  gap-16">
         {data.map((post: any) => (
           <Post key={post._id} post={post} />
         ))}
@@ -135,7 +135,7 @@ export const AllPosts = async () => {
 
   return (
     <Posts>
-      <div className="grid lg:grid-cols-3 gap-16">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-16">
         {data.map((post: any) => (
           <Post key={post._id} post={post} />
         ))}

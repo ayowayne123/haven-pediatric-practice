@@ -75,8 +75,8 @@ function EveryStep() {
         <h2 className="text-center lg:mb-16 mb-11 max-w-[215px] lg:max-w-full mx-auto">
           See what patients say about us
         </h2>
-        <div className="cardWidth md:overflow-x-auto no-scrollbar">
-          <div className="flex md:flex-row flex-col gap-11 w-full lg:mr-20 mr-10">
+        <div className="cardWidth sm:overflow-x-auto no-scrollbar">
+          <div className="flex sm:flex-row flex-col gap-11 w-full lg:mr-20 mr-10">
             <Testimonial
               name="Maryam Sanusi"
               place="(Meatmadamng)"
@@ -100,7 +100,7 @@ function EveryStep() {
 const Testimonial: React.FC<TestimonialProps> = ({ name, place, bodyText }) => {
   return (
     <div
-      className={`lg:w-[428px] lg:h-[480px] h-[420px] pt-20  shrink-0 rounded-2xl xl:pt-16 xl:pl-10 pr-7 pl-7 border border-black text-black flex flex-col `}
+      className={`lg:w-[428px] sm:w-[400px] lg:h-[480px] h-[420px] pt-20  shrink-0 rounded-2xl xl:pt-16 xl:pl-10 pr-7 pl-7 border border-black text-black flex flex-col `}
     >
       <span className="text-havenPink text-4xl mb-16">
         <VscQuote />

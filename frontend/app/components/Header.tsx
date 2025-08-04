@@ -27,7 +27,7 @@ export default function Header() {
     <header className="fixed z-50 h-24 inset-0 md:bg-white/80 flex items-center backdrop-blur-lg">
       <div className="container ">
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center justify-center gap-12">
+        <div className="hidden lg:flex items-center justify-center gap-12">
           <nav>
             <ul className="flex items-center gap-4 md:gap-6 lg:gap-8 text-xs sm:text-base tracking-tight">
               {navLinks.slice(0, 3).map((link) => (
@@ -65,7 +65,7 @@ export default function Header() {
         </div>
 
         {/* Mobile Header */}
-        <div className="flex md:hidden justify-between items-center">
+        <div className="flex lg:hidden justify-between items-center">
           <Link href="/" className="relative w-28 h-14">
             <Image src={logo} alt="logo" fill className="object-contain" />
           </Link>
@@ -79,7 +79,7 @@ export default function Header() {
 
         {/* Mobile Slide-in Menu */}
         <div
-          className={`fixed top-0 left-0 z-50 h-screen w-[80%] max-w-xs bg-havenLightPeach text-white shadow-lg transition-transform duration-300 ease-in-out ${
+          className={`fixed top-0 left-0 z-50 h-screen w-[80%] max-w-xs sm:max-w-lg  bg-havenLightPeach text-white shadow-lg transition-transform duration-300 ease-in-out ${
             menuOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         >
@@ -105,7 +105,7 @@ export default function Header() {
                 <Link
                   href={href}
                   onClick={() => setMenuOpen(false)}
-                  className={`block text-lg font-medium capitalize ${
+                  className={`block text-lg sm:text-xl font-medium capitalize ${
                     pathname === href || pathname.includes(href)
                       ? "text-havenBlue"
                       : "text-black"

@@ -226,8 +226,8 @@ function Hero() {
           </div>
         </div>
       </section>
-      <div className="h-[650px] w-full bg-white"></div>
-      <section className="lg:my-24 grid lg:grid-cols-7 md:grid-cols-2 gap-8 container max-w-60 px-0 md:max-w-full">
+      <div className="h-[620px] sm:h-[500px]  w-full bg-white"></div>
+      <section className="lg:my-24 grid lg:grid-cols-7 sm:grid-cols-2 gap-8 sm:container max-w-60 px-0 mx-auto">
         <div className=" aboutList lg:col-span-4 ">
           <span className="text-havenGreen bg-havenGreen/20">30+</span>
           <p>Led by a team of experts with over 30 years of trusted care</p>
