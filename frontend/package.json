@@ -17,6 +17,7 @@
     "@tailwindcss/postcss": "^4.1.10",
     "@tailwindcss/typography": "^0.5.16",
     "@vercel/speed-insights": "^1.1.0",
+    "aos": "^2.3.4",
     "autoprefixer": "^10.4.20",
     "date-fns": "^3.6.0",
     "hugeicons-react": "^0.3.0",

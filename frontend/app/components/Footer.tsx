@@ -5,6 +5,7 @@ import {
   InstagramIcon,
   Linkedin01Icon,
   NewTwitterEllipseIcon,
+  Facebook01Icon,
   NewTwitterRectangleIcon,
 } from "hugeicons-react";
 
@@ -69,15 +70,27 @@ export default function Footer() {
         </nav>
         <div className="lg:col-span-1 lg:space-y-10 space-y-4 mx-auto">
           <div className="lg:grid lg:grid-cols-3  flex gap-4">
-            <Link href="https://instagram.com" target="_blank">
+            <Link
+              href="https://www.instagram.com/havenpediatricpractices"
+              target="_blank"
+            >
               <InstagramIcon size={30} />
             </Link>
 
-            <Link href="https://instagram.com" target="_blank">
+            <Link
+              href="https://www.linkedin.com/company/haven-pediatric-practice/"
+              target="_blank"
+            >
               <Linkedin01Icon size={30} />
             </Link>
-            <Link href="https://instagram.com" target="_blank">
+            <Link href="https://x.com/HavenPediatric" target="_blank">
               <NewTwitterRectangleIcon size={30} />
+            </Link>
+            <Link
+              href="https://web.facebook.com/profile.php?id=61574197852460"
+              target="_blank"
+            >
+              <Facebook01Icon size={30} />
             </Link>
           </div>
           <span>Lagos, Nigeria</span>
