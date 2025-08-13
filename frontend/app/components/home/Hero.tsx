@@ -204,7 +204,7 @@ function Hero() {
           </div>
         </div>
       </section>
-
+      <div className="h-[620px] sm:h-[500px]  w-full bg-white"></div>
       {/* Stats Section */}
       <motion.section
         className="lg:my-24 grid lg:grid-cols-7 sm:grid-cols-2 gap-8 sm:container max-w-60 px-0 mx-auto"
