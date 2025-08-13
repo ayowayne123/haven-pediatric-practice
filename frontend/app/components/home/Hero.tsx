@@ -165,13 +165,7 @@ function Hero() {
             </motion.div>
 
             {/* About Section */}
-            <motion.div
-              className="absolute top-[420px]"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeUp}
-            >
+            <div className="absolute top-[420px]">
               <div className="bg-havenDarkBlue rounded-[70px] w-full min-h-[580px] text-white grid lg:grid-cols-2">
                 <div className="py-16 px-16 lg:text-xl space-y-8 flex flex-col gap-4">
                   <h4 className="bg-havenPink py-3 px-9 max-w-fit rounded-full">
@@ -199,7 +193,7 @@ function Hero() {
                   />
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
