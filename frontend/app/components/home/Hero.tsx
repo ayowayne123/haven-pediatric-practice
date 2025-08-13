@@ -170,7 +170,6 @@ function Hero() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              custom={0.6}
               variants={fadeUp}
             >
               <div className="bg-havenDarkBlue rounded-[70px] w-full min-h-[580px] text-white grid lg:grid-cols-2">
