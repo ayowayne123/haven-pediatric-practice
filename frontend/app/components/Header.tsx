@@ -19,7 +19,12 @@ export default function Header() {
     { href: "/about", label: "About Us" },
     { href: "/services", label: "Our Services" },
     { href: "/consultation", label: "Book an Appointment" },
-    { href: "/contact", label: "Contact Us" },
+    {
+      href: "https://wa.me/2348161713397",
+      target: "_blank",
+      rel: "noopener noreferrer",
+      label: "Contact Us",
+    },
     { href: "/blog", label: "Haven Insight" },
   ];
 
@@ -54,6 +59,8 @@ export default function Header() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
+                    target={link.target}
+                    rel={link.rel}
                     className={`capitalize ${isActive(link.href)}`}
                   >
                     {link.label}
@@ -100,10 +107,12 @@ export default function Header() {
           </div>
 
           <ul className="flex flex-col gap-6 mt-10 px-6">
-            {navLinks.map(({ label, href }) => (
+            {navLinks.map(({ label, href, rel, target }) => (
               <li key={href}>
                 <Link
                   href={href}
+                  target={target}
+                  rel={rel}
                   onClick={() => setMenuOpen(false)}
                   className={`block text-lg sm:text-xl font-medium capitalize ${
                     pathname === href || pathname.includes(href)

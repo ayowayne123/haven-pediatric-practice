@@ -38,7 +38,13 @@ export default function Footer() {
               <Link href="/consulation">Consulation</Link>
             </li>
             <li>
-              <Link href="/contact">contact us</Link>
+              <Link
+                href="https://wa.me/2348161713397"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                contact us
+              </Link>
             </li>
             <li>
               <Link href="/blog">haven insight</Link>
