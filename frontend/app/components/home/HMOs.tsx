@@ -57,7 +57,7 @@ function HMOs() {
         {hmoPartners.map((partner, index) => (
           <div
             key={index}
-            className="lg:w-[220px] w-[130px] h-[52px] lg:h-[76px] lg:px-5 lg:not-odd:py-2 relative  shrink-0 snap-center"
+            className="lg:w-[220px] w-[130px] h-[52px] lg:h-[76px] lg:px-5 lg:py-2 relative  shrink-0 snap-center"
           >
             <Image
               src={partner.src}
