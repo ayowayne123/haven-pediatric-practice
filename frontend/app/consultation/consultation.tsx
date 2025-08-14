@@ -26,7 +26,7 @@ function Consultation() {
       <div className="w-full lg:h-[450px] h-[300px]"></div>
 
       {/* Centered Card */}
-      <div className="absolute top-[200px] w-full z-10">
+      <div className="absolute top-28 lg:top-[200px] w-full z-10">
         <div className="container flex flex-col items-end justify-end">
           <div className="w-full max-w-[800px] bg-white px-6 py-10 sm:px-10 sm:py-14 lg:px-20 lg:py-28 transform">
             <h4 className="text-xl sm:text-2xl font-extrabold mb-6">Welcome</h4>
