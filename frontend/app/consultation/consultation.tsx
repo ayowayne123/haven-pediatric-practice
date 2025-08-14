@@ -13,7 +13,7 @@ function Consultation() {
   return (
     <div className="relative flex flex-col justify-between bg-black">
       {/* Hero Section with Background Image */}
-      <div className="relative w-full lg:h-[100svh] h-84">
+      <div className="relative w-full lg:h-[calc(100svh_-_80px)] max-h-[780px] h-84">
         <Image
           src={consultationImage}
           alt="Consultation Background"
