@@ -13,7 +13,7 @@ function Consultation() {
   return (
     <div className="relative flex flex-col justify-between bg-black">
       {/* Hero Section with Background Image */}
-      <div className="relative w-full h-[100svh]">
+      <div className="relative w-full lg:h-[100svh] h-84">
         <Image
           src={consultationImage}
           alt="Consultation Background"
@@ -23,7 +23,7 @@ function Consultation() {
         />
       </div>
 
-      <div className="w-full h-[450px]"></div>
+      <div className="w-full lg:h-[450px] h-[300px]"></div>
 
       {/* Centered Card */}
       <div className="absolute top-[200px] w-full z-10">

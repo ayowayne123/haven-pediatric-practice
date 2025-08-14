@@ -13,10 +13,14 @@ export default function Footer() {
   return (
     <footer className="bg-black relative text-white lg:py-28 py-16">
       <div className="container grid lg:grid-cols-6 gap-12 lg:gap-24 text-lg">
-        <div className="lg:col-span-3 space-y-12 lg:block flex flex-col items-center justify-center">
+        <div className="lg:col-span-3 space-y-8 lg:block flex flex-col items-center justify-center">
           <Image src={logo} alt="logo" width={48} height={48} />
           <div className="hidden md:block">
             © 2025 Haven Pediatric Practice. All rights reserved.
+          </div>
+          <div className="hidden md:block">
+            <p>customer.service@havenpractice.com</p>
+            <p>3c, Oba Dosumu, GRA, Ikeja, Lagos, Nigeria</p>
           </div>
         </div>
 
@@ -103,6 +107,10 @@ export default function Footer() {
         </div>
         <div className="md:hidden text-xs text-center">
           © 2025 Haven Pediatric Practice. All rights reserved.
+        </div>
+        <div className="md:hidden text-xs text-center">
+          <p>customer.service@havenpractice.com</p>
+          <p>3c, Oba Dosumu, GRA, Ikeja, Lagos, Nigeria</p>
         </div>
       </div>
     </footer>
