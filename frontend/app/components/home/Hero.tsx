@@ -195,6 +195,79 @@ function Hero() {
               </div>
             </div>
           </div>
+          {/* Mobile Images */}
+          <div className="relative h-[500px] lg:hidden flex w-full">
+            <CircledPhoto
+              image={mother}
+              bgColor="bg-havenGreen"
+              width={65}
+              height={65}
+              position="left-0 top-11"
+            />
+            <CircledPhoto
+              image={girl2}
+              bgColor="bg-havenBlue"
+              width={65}
+              height={65}
+              position="right-0 top-11"
+            />
+            <CircledPhoto
+              image={girl}
+              bgColor="bg-havenYellow"
+              width={40}
+              height={40}
+              position="left-2 top-48"
+            />
+            <CircledPhoto
+              image={womanBack}
+              bgColor="bg-white"
+              width={46}
+              height={46}
+              position="right-2 top-40"
+            />
+            <div
+              className={`absolute w-[80px]  h-[80px] top-[130px] bg-havenPink rounded-full left-[calc(50%-40px)]  flex  `}
+            >
+              <div className={`relative w-40 h-40 ]`}>
+                <Image
+                  src={schoolBoy}
+                  alt="A school Boy dressed in uniform"
+                  fill
+                  className=" object-bottom object-contain"
+                />
+              </div>
+            </div>
+
+            <div className=" absolute  top-[280px] ">
+              <div className="bg-havenDarkBlue rounded-[20px]  w-full min-h-[580px] text-white  grid  ">
+                <div className="py-8 px-8  lg:text-xl space-y-3 flex flex-col gap-4">
+                  <h4 className="bg-havenPink  py-3 px-9 max-w-full rounded-[10px] text-center">
+                    About Haven Pediatric Practice
+                  </h4>
+                  <span className="text-sm text-center leading-[170%]">
+                    At Haven Pediatric Practice, we know that your child’s
+                    health and happiness come first. That’s why we’ve created a
+                    warm, welcoming space where children receive compassionate,
+                    expert care from infancy through adolescence.
+                  </span>
+                  <span className="text-sm text-center leading-[170%]">
+                    Our experienced team is here to support your little one’s
+                    growth, well-being, and development with personalized
+                    attention in a safe, nurturing environment. More than just a
+                    clinic, we’re your partners in raising healthy, happy kids.
+                  </span>
+                </div>
+                <div className="h-80 w-full relative ">
+                  <Image
+                    src={doctor}
+                    alt="Black Female doctor dressed in white coat and stethoscope"
+                    fill
+                    className="object-contain object-bottom "
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <div className="h-[620px] sm:h-[500px]  w-full bg-white"></div>
