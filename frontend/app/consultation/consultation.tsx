@@ -23,7 +23,7 @@ function Consultation() {
         />
       </div>
 
-      <div className="w-full lg:h-[450px] h-[300px]"></div>
+      <div className="w-full h-[450px] "></div>
 
       {/* Centered Card */}
       <div className="absolute top-28 lg:top-[200px] w-full z-10">
