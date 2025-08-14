@@ -79,7 +79,7 @@ export default function Footer() {
           </ul>
         </nav>
         <div className="lg:col-span-1 lg:space-y-10 space-y-4 mx-auto">
-          <div className="lg:grid lg:grid-cols-3  flex gap-4">
+          <div className="lg:grid lg:grid-cols-4  flex gap-4">
             <Link
               href="https://www.instagram.com/havenpediatricpractices"
               target="_blank"
@@ -103,7 +103,7 @@ export default function Footer() {
               <Facebook01Icon size={30} />
             </Link>
           </div>
-          <span>Lagos, Nigeria</span>
+          <span className="lg:text-left text-center">Lagos, Nigeria</span>
         </div>
         <div className="md:hidden text-xs text-center">
           © 2025 Haven Pediatric Practice. All rights reserved.
