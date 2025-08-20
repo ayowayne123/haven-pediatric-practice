@@ -90,6 +90,9 @@ h2 {
 .bgCurve {
   border-radius: 50% 50% 0% 0% / 75% 75% 0% 0%;
 }
-.bgCurveMobile {
-  border-radius: 50% 50% 0% 0% / 50% 50% 0% 0%;
+
+@media (max-width: 768px) {
+  .bgCurve {
+    border-radius: 50% 50% 0% 0% / 50% 50% 0% 0%;
+  }
 }

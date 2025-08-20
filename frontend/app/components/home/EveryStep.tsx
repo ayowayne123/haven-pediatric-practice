@@ -34,7 +34,7 @@ function EveryStep() {
   ];
   return (
     <section className="relative bg-white overflow-hidden">
-      <div className="bg-havenLightPink w-[140%] -translate-x-[14%] lg:min-h-[1000px] min-h-[590px] lg:bgCurve bgCurveMobile">
+      <div className="bg-havenLightPink w-[140%] -translate-x-[14%] lg:min-h-[1000px] min-h-[590px] bgCurve ">
         <div className="sm:container max-w-[100vw] mx-auto lg:pt-24 xl:pt-28 px-8">
           <h2 className="xl:text-4xl lg:text-3xl font-extrabold flex flex-col lg:mb-16 text-2xl">
             <span>We’re Here for You.</span>
