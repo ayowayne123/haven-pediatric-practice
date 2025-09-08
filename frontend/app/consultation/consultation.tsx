@@ -32,10 +32,6 @@ function Consultation() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setAppointmentDateTime(e.target.value);
-  };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -167,9 +163,11 @@ function Consultation() {
                   value={appointmentDateTime}
                   onChange={(newValue) => setAppointmentDateTime(newValue)}
                   minDateTime={dayjs()} // prevents selecting past times
-                  renderInput={(params) => (
-                    <TextField {...params} className="bg-white rounded-lg" />
-                  )}
+                  slotProps={{
+                    textField: {
+                      className: "bg-white rounded-full w-full", // tailwind styles
+                    },
+                  }}
                 />
               </LocalizationProvider>
 
