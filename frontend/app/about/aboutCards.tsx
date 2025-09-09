@@ -11,7 +11,7 @@ const sections = [
   },
   {
     title: "Who We Serve",
-    body: "From newborns needing their first vaccines to teenagers navigating complex health needs, we proudly serve children across Lagos with personalized care tailored to their age, condition, and personality.",
+    body: "From newborns needing their first vaccines to teenagers navigating complex health needs. We proudly serve children across Lagos with personalized care tailored to their age, condition, and personality.",
     bg: "bg-[#FEF4ED]",
   },
   {

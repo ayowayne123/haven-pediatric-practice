@@ -18,7 +18,7 @@ const havenReasons = [
   "Emergency Pediatric Room",
   "Laboratory",
   "Vaccination",
-  "Pre-school Clinic",
+  "Pre-school medical screening",
   "Allergy and asthma management",
   "Echocardiogram",
 ];
@@ -76,6 +76,13 @@ const CardInfo = [
   {
     doubleColumn: true,
   },
+  {
+    headingText: "Immunizations & Vaccines",
+    bodyText:
+      "Protection that lasts a lifetime. We provide routine and catch-up vaccinations in a safe, gentle, and child-friendly setting—helping your child stay healthy and protected against preventable diseases.",
+    linkName: "Book Appointment",
+    bgColor: "bg-[#FEF4ED]",
+  },
 ];
 
 function AboutCards() {
@@ -128,7 +135,7 @@ const Card: React.FC<CardProps> = ({
   if (doubleColumn === true) {
     return (
       <div
-        className={`text-white lg:h-[440px] text-sm w-full bg-cover bg-no-repeat bg-center lg:col-span-2 p-6 rounded-[20px] lg:flex flex-col justify-between hidden `}
+        className={`text-white lg:h-[440px] text-sm w-full bg-cover bg-no-repeat bg-center lg:col-span-2 lg;row-span-2 p-6 rounded-[20px] lg:flex flex-col justify-between hidden `}
         style={{
           backgroundImage: ` url(${hospitalRoom.src})`,
         }}

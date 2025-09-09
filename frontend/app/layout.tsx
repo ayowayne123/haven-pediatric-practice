@@ -6,6 +6,8 @@ import { Nunito } from "next/font/google";
 import { draftMode } from "next/headers";
 import { VisualEditing, toPlainText } from "next-sanity";
 import { Toaster } from "sonner";
+import Link from "next/link";
+import { FaWhatsapp } from "react-icons/fa";
 
 import DraftModeToast from "@/app/components/DraftModeToast";
 import Footer from "@/app/components/Footer";
@@ -59,17 +61,28 @@ export default async function RootLayout({
           {isDraftMode && (
             <>
               <DraftModeToast />
-              {/*  Enable Visual Editing, only to be rendered when Draft Mode is enabled */}
+
               <VisualEditing />
             </>
           )}
-          {/* The <SanityLive> component is responsible for making all sanityFetch calls in your application live, so should always be rendered. */}
+
           <SanityLive onError={handleError} />
           <Header />
           <main className="">{children}</main>
           <Footer />
         </section>
         <SpeedInsights />
+        <Link
+          href="https://wa.me/2348161713397?text=Hello%20Haven%20Pediatric%20Practice!%20I%20would%20like%20to%20book%20a%20consultation."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-green-500 text-white px-4 py-3 rounded-full shadow-lg hover:bg-green-600 transition"
+        >
+          <FaWhatsapp size={24} />
+          <span className="hidden sm:inline text-sm font-medium">
+            Chat with us
+          </span>
+        </Link>
       </body>
     </html>
   );

@@ -14,15 +14,6 @@ export async function POST(req: Request) {
       appointmentDateTime,
     } = body;
 
-    // Transporter setup (use environment variables!)
-    // const transporter = nodemailer.createTransport({
-    //   service: "gmail", // Or use SMTP
-    //   auth: {
-    //     user: process.env.EMAIL_USER,
-    //     pass: process.env.EMAIL_PASS,
-    //   },
-    // });
-
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST, // your SMTP server
       port: Number(process.env.SMTP_PORT), // usually 465 (SSL) or 587 (TLS)
@@ -33,34 +24,94 @@ export async function POST(req: Request) {
       },
     });
 
-    // await transporter.sendMail({
-    //   from: `"Haven Clinic" <${process.env.EMAIL_USER}>`,
-    //   to: process.env.RECEIVER_EMAIL,
-    //   subject: "New Consultation Appointment",
-    //   text: `
-    //     Name: ${name}
-    //     Email: ${email}
-    //     Phone: ${phone}
-    //     Address: ${address}
-    //     Specialist: ${specialist}
-    //     Complaint: ${complaint}
-    //     Appointment Date & Time: ${appointmentDateTime}
-    //   `,
-    // });
+    const formattedDate = appointmentDateTime
+      ? new Date(appointmentDateTime).toLocaleString("en-NG", {
+          timeZone: "Africa/Lagos",
+          weekday: "long", // Monday, Tuesday...
+          year: "numeric",
+          month: "long", // January, February...
+          day: "numeric",
+          hour: "numeric",
+          minute: "numeric",
+          hour12: true, // 12-hour clock (e.g. 3:45 PM)
+        })
+      : "Not provided";
 
     await transporter.sendMail({
       from: `"Haven Clinic" <wayne@benjys.me>`,
       to: process.env.RECEIVER_EMAIL,
-      subject: "New Consultation Appointment",
+      subject: `🩺 New Appointment for ${specialist}`,
       text: `
-          Name: ${name}
-          Email: ${email}
-          Phone: ${phone}
-          Address: ${address}
-          Specialist: ${specialist}
-          Complaint: ${complaint}
-          Appointment Date & Time: ${appointmentDateTime}
-        `,
+    New Consultation Appointment
+    
+    Name: ${name}
+    Email: ${email}
+    Phone: ${phone}
+    Address: ${address}
+    Specialist: ${specialist}
+    Complaint: ${complaint}
+    Appointment Date & Time: ${formattedDate}
+      `,
+      html: `
+      <div style="font-family: Arial, sans-serif; background: #f4f7fa; padding: 30px; color: #333;">
+        <div style="max-width: 600px; margin: 0 auto; background: #fff; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); overflow: hidden;">
+          
+          <!-- Header -->
+          <div style="background: #2c3e50; color: #fff; padding: 20px; text-align: center;">
+            <h2 style="margin: 0; font-size: 20px;">🩺 New Appointment Request</h2>
+            <p style="margin: 5px 0 0; font-size: 14px;">Specialist: <strong>${specialist}</strong></p>
+          </div>
+    
+          <!-- Body -->
+          <div style="padding: 20px;">
+            <p style="font-size: 16px; margin-bottom: 15px;">Hello,</p>
+            <p style="margin-bottom: 20px;">
+              A new consultation appointment has been scheduled. Below are the details:
+            </p>
+    
+            <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse: collapse; margin-bottom: 20px;">
+              <tr>
+                <td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Name</strong></td>
+                <td style="padding: 8px; border-bottom: 1px solid #eee;">${name}</td>
+              </tr>
+              <tr>
+                <td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Email</strong></td>
+                <td style="padding: 8px; border-bottom: 1px solid #eee;">${email}</td>
+              </tr>
+              <tr>
+                <td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Phone</strong></td>
+                <td style="padding: 8px; border-bottom: 1px solid #eee;">${phone}</td>
+              </tr>
+              <tr>
+                <td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Address</strong></td>
+                <td style="padding: 8px; border-bottom: 1px solid #eee;">${address}</td>
+              </tr>
+              <tr>
+                <td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Specialist</strong></td>
+                <td style="padding: 8px; border-bottom: 1px solid #eee;">${specialist}</td>
+              </tr>
+              <tr>
+                <td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Complaint</strong></td>
+                <td style="padding: 8px; border-bottom: 1px solid #eee;">${complaint}</td>
+              </tr>
+              <tr>
+                <td style="padding: 8px;"><strong>Appointment Date & Time</strong></td>
+                <td style="padding: 8px;">${formattedDate}</td>
+              </tr>
+            </table>
+    
+            <p style="margin: 0; font-size: 14px; color: #555;">
+              Please log into the Haven Clinic system to manage this appointment.
+            </p>
+          </div>
+    
+          <!-- Footer -->
+          <div style="background: #f9fafb; padding: 15px; text-align: center; font-size: 12px; color: #777;">
+            Haven Clinic © ${new Date().getFullYear()} | Confidential
+          </div>
+        </div>
+      </div>
+      `,
     });
 
     return NextResponse.json({ success: true }, { status: 200 });
