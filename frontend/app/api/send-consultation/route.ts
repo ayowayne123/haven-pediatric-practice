@@ -101,7 +101,7 @@ export async function POST(req: Request) {
             </table>
     
             <p style="margin: 0; font-size: 14px; color: #555;">
-              Please log into the Haven Clinic system to manage this appointment.
+              Please continue communication with the Client with the email provided above
             </p>
           </div>
     

@@ -1,6 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
-
+import Contact from "./contact";
 export const metadata: Metadata = {
   title: "Contact us ",
   description:
@@ -17,7 +17,11 @@ export const metadata: Metadata = {
   ],
 };
 function ContactPage() {
-  return <div>Contact</div>;
+  return (
+    <div>
+      <Contact />
+    </div>
+  );
 }
 
 export default ContactPage;
