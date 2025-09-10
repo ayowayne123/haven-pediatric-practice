@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import Hospital from "@/public/images/hospitalBed.png";
+import Hospital from "@/public/images/hospitalBed.jpg";
 import { VscQuote } from "react-icons/vsc";
 import { motion } from "framer-motion";
 

@@ -1,9 +1,11 @@
 import { Suspense } from "react";
 import Link from "next/link";
+import NewsLetter from "@/app/components/home/NewsLetter";
 import Hero from "@/app/components/home/Hero";
 import CoreServices from "@/app/components/home/CoreServices";
 import EveryStep from "@/app/components/home/EveryStep";
 import HMOs from "@/app/components/home/HMOs";
+import FAQ from "./components/home/Faq";
 
 import { RecentPosts } from "@/app/components/Posts";
 
@@ -26,6 +28,10 @@ export default async function Page() {
             <Suspense>{await RecentPosts()}</Suspense>
           </aside>
         </div>
+      </div>
+      <div>
+        <NewsLetter />
+        <FAQ />
       </div>
     </>
   );
