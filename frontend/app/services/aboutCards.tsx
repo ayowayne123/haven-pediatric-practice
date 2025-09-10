@@ -135,17 +135,22 @@ const Card: React.FC<CardProps> = ({
   if (doubleColumn === true) {
     return (
       <div
-        className={`text-white lg:h-[440px] text-sm w-full bg-cover bg-no-repeat bg-center lg:col-span-2 lg;row-span-2 p-6 rounded-[20px] lg:flex flex-col justify-between hidden `}
-        style={{
-          backgroundImage: ` url(${hospitalRoom.src})`,
-        }}
+        className={`text-white lg:h-full text-sm w-full  lg:col-span-2 -space-y-4 lg:row-span-2  overflow-hidden rounded-[20px] lg:flex flex-col justify-between hidden `}
       >
-        <div className="bg-havenDarkBlue h-full w-full rounded-[10px] px-12 py-9">
+        <div className="h-[450px] shrink-0 w-full relative">
+          <Image
+            src={hospitalRoom}
+            alt="hospitalRoom"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+        <div className="bg-havenDarkBlue h-full w-full rounded-[10px] px-20 py-12 z-20">
           <h3 className="lg:text-[26px] font-extrabold flex flex-col">
-            <span>Why Families</span>
-            <span> Choose Haven</span>
+            <span>Why Families Choose Haven</span>
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-8 py-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-10 gap-x-8 py-8">
             {havenReasons.map((reason, index) => (
               <div key={index} className="flex items-center gap-6  ">
                 <div className="border-havenYellow w-4 h-4 border-4 rounded-full" />

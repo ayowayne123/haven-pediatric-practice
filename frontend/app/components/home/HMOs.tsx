@@ -9,6 +9,10 @@ import phillips from "@/public/logos/phillips.png";
 import bupa from "@/public/logos/bupa.png";
 import hp from "@/public/logos/hp.png";
 import axa from "@/public/logos/axa.png";
+import bastion from "@/public/logos/bastion.png";
+import clearline from "@/public/logos/clearline.png";
+import crownjewel from "@/public/logos/crownjewel.png";
+import hygeia from "@/public/logos/hygeia.png";
 
 const hmoPartners = [
   { src: nem, alt: "logo of nem", className: "lg:py-[5.5px]" },
@@ -20,6 +24,10 @@ const hmoPartners = [
   { src: hp, alt: "logo of hp", className: "lg:py-[31px]" },
   { src: bupa, alt: "logo of bupa", className: "lg:py-1.5" },
   { src: axa, alt: "logo of axa", className: "lg:py-1" },
+  { src: bastion, alt: "logo of bastion", className: "lg:py-1" },
+  { src: clearline, alt: "logo of clearline", className: "lg:py-4" },
+  { src: crownjewel, alt: "logo of crownjewel", className: "lg:py-5" },
+  { src: hygeia, alt: "logo of hygeia", className: "lg:py-6" },
 ];
 
 function HMOs() {

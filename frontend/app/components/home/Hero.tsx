@@ -282,42 +282,41 @@ function Hero() {
           visible: { transition: { staggerChildren: 0.2 } },
         }}
       >
-        {[
-          {
-            text: "30+",
-            desc: "Led by a team of experts with over 30 years of trusted care",
-            color: "text-havenGreen bg-havenGreen/20",
-          },
-          {
-            icon: bed,
-            desc: "State-of-the-art Facilities",
-            color: "text-havenPink bg-havenPink/20",
-          },
-          {
-            icon: hands,
-            desc: "Affordable Private Healthcare",
-            color: "text-havenBlue bg-havenBlue/20",
-          },
-          {
-            text: "24/7",
-            desc: "Speedy access to pediatric specialist",
-            color: "text-havenYellow bg-havenYellow/20",
-          },
-        ].map((item, i) => (
-          <motion.div
-            key={i}
-            variants={fadeUp}
-            custom={i * 0.2}
-            className="aboutList lg:col-span-3"
-          >
-            <span className={item.color}>
-              {item.text || (
-                <Image src={item.icon!} alt="icon" width={40} height={40} />
-              )}
-            </span>
-            <p>{item.desc}</p>
-          </motion.div>
-        ))}
+        <motion.div className="aboutList lg:col-span-4" variants={fadeUp}>
+          <span className="text-havenGreen bg-havenGreen/20">30+</span>
+          <p>Led by a team of experts with over 30 years of trusted care</p>
+        </motion.div>
+
+        <motion.div className="aboutList lg:col-span-3" variants={fadeUp}>
+          <span className="text-havenPink bg-havenPink/20">
+            <Image
+              src={bed}
+              alt="bed"
+              width={40}
+              height={40}
+              className="object-contain"
+            />
+          </span>
+          <p>State-of-the-art Facilities</p>
+        </motion.div>
+
+        <motion.div className="aboutList lg:col-span-4" variants={fadeUp}>
+          <span className="text-havenBlue bg-havenBlue/20">
+            <Image
+              src={hands}
+              alt="bed"
+              width={42}
+              height={38}
+              className="object-contain"
+            />
+          </span>
+          <p>Affordable Private Healthcare</p>
+        </motion.div>
+
+        <motion.div className="aboutList lg:col-span-3" variants={fadeUp}>
+          <span className="text-havenYellow bg-havenYellow/20">24/7</span>
+          <p>Speedy access to pediatric specialist</p>
+        </motion.div>
       </motion.section>
     </>
   );
