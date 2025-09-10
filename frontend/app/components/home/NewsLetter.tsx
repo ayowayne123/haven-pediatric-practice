@@ -8,7 +8,7 @@ function NewsLetter() {
   return (
     <section className="relative w-full">
       {/* Background image */}
-      <div className="relative w-full h-[350px] md:h-[400px] lg:h-[610px]">
+      <div className="relative w-full h-[320px] md:h-[340px] lg:h-[610px]">
         <Image
           src={twobeds}
           alt="Hospital beds"
@@ -19,7 +19,7 @@ function NewsLetter() {
       </div>
 
       {/* Overlay card */}
-      <div className="absolute lg:top-[273px] w-full z-30 flex justify-center items-center ">
+      <div className="lg:absolute lg:top-[273px] w-full z-30 flex justify-center items-center ">
         {/* Underlay card 2 */}
         <motion.div
           initial={{ opacity: 0, y: 50, scale: 0.95 }}
@@ -41,14 +41,14 @@ function NewsLetter() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="relative bg-havenDarkBlue mx-auto lg:h-[524px] text-center z-30 lg:max-w-4xl xl:max-w-5xl w-full rounded-2xl shadow-lg p-6 sm:p-10 lg:p-24"
+          className="relative bg-havenDarkBlue mx-auto lg:h-[524px] text-center z-30 container lg:max-w-4xl xl:max-w-5xl w-full lg:rounded-2xl shadow-lg p-6 sm:p-10 lg:p-24"
         >
           <motion.h3
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
             viewport={{ once: true }}
-            className="text-havenYellow font-bold text-lg sm:text-xl lg:text-[40px] mb-6"
+            className="text-havenYellow font-bold text-xl sm:text-2xl lg:text-[40px] mb-6"
           >
             Haven Insights
           </motion.h3>
@@ -70,17 +70,17 @@ function NewsLetter() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 1 }}
             viewport={{ once: true }}
-            className="flex bg-white rounded-full overflow-hidden max-w-xl mx-auto h-20 p-2"
+            className="flex bg-white rounded-full overflow-hidden max-w-xl mx-auto lg:h-20 h-16 p-2"
           >
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-4 py-2  focus:outline-none text-xl"
+              className=" px-4 py-2 w-full focus:outline-none lg:text-xl"
               required
             />
             <button
               type="submit"
-              className="bg-havenBlue text-white px-10 py-2 text-base font-bold lg:text-2xl hover:bg-havenPink rounded-full transition"
+              className="bg-havenBlue text-white px-6 shrink-0 lg:px-10 py-2 text-base font-bold lg:text-2xl hover:bg-havenPink rounded-full transition"
             >
               Submit
             </button>

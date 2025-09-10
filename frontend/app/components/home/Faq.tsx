@@ -61,7 +61,7 @@ function FAQ() {
   };
 
   return (
-    <section className="bg-havenLightYellow pb-16 lg:pt-[400px] ">
+    <section className="bg-havenLightYellow pb-16 lg:pt-[400px] pt-20">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-center text-xl sm:text-2xl lg:text-3xl font-bold text-havenBlue mb-10">
           Frequently Asked Questions (FAQ)

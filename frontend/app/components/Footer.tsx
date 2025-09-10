@@ -12,7 +12,7 @@ import {
 export default function Footer() {
   return (
     <footer className="bg-black relative text-white lg:max-h-[360px] py-16">
-      <div className="container grid lg:grid-cols-6 gap-12 items-center lg:gap-24 text-lg">
+      <div className="container grid lg:grid-cols-6 gap-12 items-center lg:gap-16 xl:gap-24 text-lg">
         <div className="lg:col-span-3 space-y-8 lg:block flex flex-col items-center justify-center">
           <Image src={logo} alt="logo" width={48} height={48} />
           <div className="hidden md:block">

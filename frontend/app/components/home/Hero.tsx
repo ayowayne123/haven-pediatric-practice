@@ -136,14 +136,14 @@ function Hero() {
               bgColor="bg-havenYellow"
               width={120}
               height={120}
-              position="left-64 top-48"
+              position="xl:left-64 lg:left-40 top-48"
             />
             <CircledPhoto
               image={womanBack}
               bgColor="bg-white"
               width={160}
               height={160}
-              position="right-64 top-40"
+              position="xl:right-64 lg:right-40 top-40"
             />
 
             {/* School Boy */}
