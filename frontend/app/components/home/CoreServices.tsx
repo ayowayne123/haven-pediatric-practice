@@ -35,13 +35,13 @@ function CoreServices() {
       headingColor: "text-[#FF7EA8]",
       headingText: "Vaccination",
       bodyText:
-        "We offer routine and catch-up immunizations to protect children against common preventable diseases. Our vaccines are safe, up-to-date, and administered by experienced pediatric professionals in a calm, child-friendly environment.",
+        "In line with WHO standards, we provide both routine and catch-up immunizations to protect children against common preventable diseases. All vaccines are safe, up to date, and administered by experienced pediatric professionals in a calm, child-friendly environment.",
     },
     {
       number: "03",
       bgColor: "bg-havenYellow",
       headingColor: "text-[#FBDD7F]",
-      headingText: "Pre-School Clinic:",
+      headingText: "Pre-school medical screening",
       bodyText:
         "A comprehensive medical check-up designed to meet school entry requirements. We provide thorough health screenings and medical clearance for children starting or transferring to a new school, ensuring they're ready and fit for the classroom.",
     },
