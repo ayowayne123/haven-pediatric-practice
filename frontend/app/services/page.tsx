@@ -1,7 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import PageHeader from "@/app/components/PageHeader";
-import hospitalBed from "@/public/images/hospitalBed.png";
+import hospitalBed from "@/public/images/hospitalBed.jpg";
 import AboutCards from "./aboutCards";
 
 export const metadata: Metadata = {

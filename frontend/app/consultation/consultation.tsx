@@ -33,9 +33,11 @@ function Consultation() {
   };
 
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true);
     try {
       const res = await fetch("/api/send-consultation", {
         method: "POST",
@@ -53,6 +55,8 @@ function Consultation() {
       }
     } catch {
       toast.error("Error sending request.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -161,9 +165,14 @@ function Consultation() {
 
                   <button
                     type="submit"
-                    className="bg-havenPink text-white rounded-full py-3 mt-2 hover:bg-havenBlue transition"
+                    disabled={loading} // disable while loading
+                    className={`bg-havenPink text-white rounded-full py-3 mt-2 transition ${
+                      loading
+                        ? "opacity-70 cursor-not-allowed"
+                        : "hover:bg-havenBlue"
+                    }`}
                   >
-                    Book Appointment
+                    {loading ? "Sending..." : "Book Appointment"}
                   </button>
                 </form>
               </>
