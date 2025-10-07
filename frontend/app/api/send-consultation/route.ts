@@ -15,12 +15,12 @@ export async function POST(req: Request) {
     } = body;
 
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST, // your SMTP server
-      port: Number(process.env.SMTP_PORT), // usually 465 (SSL) or 587 (TLS)
-      secure: Number(process.env.SMTP_PORT) === 465, // true for 465, false for 587
+      host: process.env.SMTP_HOST,
+      port: Number(process.env.SMTP_PORT),
+      secure: Number(process.env.SMTP_PORT) === 465,
       auth: {
-        user: process.env.SMTP_USER, // your email/login
-        pass: process.env.SMTP_PASS, // your password/app password
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
       },
     });
 
@@ -38,7 +38,7 @@ export async function POST(req: Request) {
       : "Not provided";
 
     await transporter.sendMail({
-      from: `"Haven Clinic" <wayne@benjys.me>`,
+      from: `"Haven Pediatric Practice" <wayne@benjys.me>`,
       to: process.env.RECEIVER_EMAIL,
       subject: `🩺 New Appointment for ${specialist}`,
       text: `
@@ -107,10 +107,45 @@ export async function POST(req: Request) {
     
           <!-- Footer -->
           <div style="background: #f9fafb; padding: 15px; text-align: center; font-size: 12px; color: #777;">
-            Haven Clinic © ${new Date().getFullYear()} | Confidential
+            Haven Pediatric Practice © ${new Date().getFullYear()} | Confidential
           </div>
         </div>
       </div>
+      `,
+    });
+    await transporter.sendMail({
+      from: `""Haven Pediatric Practice" <wayne@benjys.me>`,
+      to: email,
+      subject: `Your Appointment Request with Haven Pediatric Practice`,
+      html: `
+        <div style="font-family: Arial, sans-serif; background: #f9fafb; padding: 30px;">
+          <div style="max-width: 600px; margin: auto; background: #fff; border-radius: 10px; padding: 20px;">
+            <h2 style="color: #0a2a43;">Hi ${name},</h2>
+            <p>Thank you for reaching out to Haven Pediatric Practice!</p>
+            <p>We’ve received your appointment request and our team will contact you shortly via <strong>SMS or phone call</strong> to confirm your booking details.</p>
+    
+            <h3 style="color: #0a2a43; margin-top: 20px;">Appointment Request Summary</h3>
+            <ul>
+              <li><strong>Pediatrician:</strong> ${specialist}</li>
+              <li><strong>Preferred Date & Time:</strong> ${formattedDate}</li>
+              <li><strong>Complaint:</strong> ${complaint}</li>
+            </ul>
+    
+            <p style="margin-top: 20px;">
+              Please keep your phone close — one of our representatives will reach out soon to finalize your appointment.
+            </p>
+    
+            <p style="margin-top: 30px; font-size: 13px; color: #777;">
+              Warm regards,<br/>
+              The Haven Pediatric Practice Team<br/>
+              <a href="https://www.havenpractice.com/" style="color:#0a2a43; text-decoration:none;">havenpractice.com</a>
+            </p>
+    
+            <p style="margin-top: 20px; font-size: 12px; color: #aaa;">
+              © ${new Date().getFullYear()} Haven Pediatric Practice. All rights reserved.
+            </p>
+          </div>
+        </div>
       `,
     });
 

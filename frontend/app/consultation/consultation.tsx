@@ -128,7 +128,7 @@ function Consultation() {
                     className="appearance-none border px-4 py-2 rounded-full w-full"
                   >
                     <option value="" disabled>
-                      Select Specialist
+                      Select Pediatrician
                     </option>
                     <option>Pediatric Cardiologist</option>
                     <option>Pediatric Neurologist</option>
